@@ -1,0 +1,290 @@
+/* Базовые настройки */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Контейнер страницы */
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+/* Шапка */
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+section {
+  margin-top: 3rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  animation: fadeInUp 1s ease;
+}
+
+/* Меню */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #7fff9f;
+}
+
+/* Контент */
+main {
+  padding: 40px;
+  text-align: left;  /* изменено на left для удобства чтения */
+  flex-grow: 1;
+}
+
+h1, h2, h3, p {
+  margin: 0 0 1em 0;
+}
+
+.accent {
+  color: #7fff9f;
+}
+
+/* Кнопка "Назад" */
+.back-button {
+  display: inline-block;
+  margin-bottom: 2em;
+  background-color: #2e4b3c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #3e614d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.5);
+}
+
+/* Деталі книги */
+#book-details {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ccc;
+  text-align: left;
+}
+
+#book-details img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1em;
+  display: block;
+}
+
+#book-details h2 {
+  font-size: 2em;
+  margin-top: 0;
+  color: #7fff9f;
+}
+
+#book-details p.description {
+  font-size: 1.1em;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+/* Кнопки — работают всегда */
+.btn,
+button,
+a.button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #2e4b3c;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn:hover,
+button:hover,
+a.button:hover {
+  background-color: #3e614d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+}
+
+/* Каталог */
+.catalog-wrapper {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.catalog-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.catalog-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.catalog {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.book {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.5s ease forwards;
+  color: #eee;
+  text-align: center;
+}
+
+.book:nth-child(1) { animation-delay: 0.1s; }
+.book:nth-child(2) { animation-delay: 0.2s; }
+.book:nth-child(3) { animation-delay: 0.3s; }
+
+.book h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #7fff9f;
+}
+
+.book p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* Оформление заказов, как книги */
+.order-block {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.5s ease forwards;
+  color: #eee;
+  text-align: left;
+  margin: 15px;
+}
+
+.order-block h3 {
+  margin: 0 0 10px;
+  color: #7fff9f;
+  font-size: 18px;
+}
+
+.order-block p, .order-block ul {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+#orders-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Футер всегда внизу */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 15px;
+  color: #888;
+  border-top: 1px solid #333;
+  width: 100%;
+}
+
+/* Анімації */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
