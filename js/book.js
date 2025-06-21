@@ -1,4 +1,4 @@
-// Отримуємо параметр id з URL, напр. book.html?id=kobzar
+// Отримуємо параметр id з URL
 const params = new URLSearchParams(window.location.search);
 const bookId = params.get('id');
 
