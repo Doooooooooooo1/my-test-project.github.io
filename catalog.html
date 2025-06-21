@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Каталог — Ліс та Гори</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .book {
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin-bottom: 1em;
+      max-width: 320px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .book img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0.75em;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .quantity-control {
+      display: inline-flex;
+      gap: 0.5em;
+      align-items: center;
+    }
+
+    .quantity-control button {
+      width: 28px;
+      height: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .quantity-control input {
+      width: 32px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      pointer-events: none;
+      background: #f9f9f9;
+    }
+
+.details-button {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 0.4em 0.8em;
+  background-color: #2e7d32;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #1b5e20;
+}
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+
+    .catalog {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="logo">Ліс та Гори</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="cart.html">Кошик</a></li>
+          <li><a href="admin.html">Адмін-панель</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Каталог книжок</h1>
+  <div class="catalog-wrapper">
+      <div class="catalog">
+
+<div class="book" data-price="120" data-id="kobzar">
+  <img src="images/covers/kobzar.jpg" alt="Кобзар" />
+  <h2>Тарас Шевченко — Кобзар</h2>
+  <p>Збірка віршів, що стала символом української літератури.</p>
+  <div class="quantity-control">
+    <button class="minus">−</button>
+    <input type="text" class="quantity" value="1" readonly />
+    <button class="plus">+</button>
+  </div>
+  <button class="add-to-cart">Додати до кошика</button>
+  <a href="book.html?id=kobzar" class="details-button">Детальніше</a>
+</div>
+
+       <div class="book" data-price="150" data-id="lisova_pisnya">
+  <img src="images/covers/lisova_pisnya.jpg" alt="Лісова пісня" />
+  <h2>Леся Українка — Лісова пісня</h2>
+  <p>Драматична поема про кохання, природу та дух свободи.</p>
+  <div class="quantity-control">
+    <button class="minus">−</button>
+    <input type="text" class="quantity" value="1" readonly />
+    <button class="plus">+</button>
+  </div>
+  <button class="add-to-cart">Додати до кошика</button>
+  <a href="book.html?id=lisova_pisnya" class="details-button">Детальніше</a>
+</div>
+
+        <div class="book" data-price="130" data-id="zakhar_berkut">
+  <img src="images/covers/zakhar_berkut.jpg" alt="Захар Беркут" />
+  <h2>Іван Франко — Захар Беркут</h2>
+  <p>Історичне оповідання про героїчний спротив монголам.</p>
+  <div class="quantity-control">
+    <button class="minus">−</button>
+    <input type="text" class="quantity" value="1" readonly />
+    <button class="plus">+</button>
+  </div>
+  <button class="add-to-cart">Додати до кошика</button>
+  <a href="book.html?id=zakhar_berkut" class="details-button">Детальніше</a>
+</div>
+
+        <div class="book" data-price="140" data-id="tini">
+  <img src="images/covers/tini.jpg" alt="Тіні забутих предків" />
+  <h2>Михайло Коцюбинський — Тіні забутих предків</h2>
+  <p>Містична історія гуцульського кохання й фольклору.</p>
+  <div class="quantity-control">
+    <button class="minus">−</button>
+    <input type="text" class="quantity" value="1" readonly />
+    <button class="plus">+</button>
+  </div>
+  <button class="add-to-cart">Додати до кошика</button>
+  <a href="book.html?id=tini" class="details-button">Детальніше</a>
+</div>
+
+        <div class="book" data-price="110" data-id="zemlya">
+  <img src="images/covers/zemlya.jpg" alt="Земля" />
+  <h2>Ольга Кобилянська — Земля</h2>
+  <p>Соціально-психологічна драма про село, землю та гріх.</p>
+  <div class="quantity-control">
+    <button class="minus">−</button>
+    <input type="text" class="quantity" value="1" readonly />
+    <button class="plus">+</button>
+  </div>
+  <button class="add-to-cart">Додати до кошика</button>
+  <a href="book.html?id=zemlya" class="details-button">Детальніше</a>
+</div>
+
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ліс та Гори. Всі права захищено.</p>
+    </footer>
+  </div>
+
+  <script src="js/catalog.js"></script>
+</body>
+</html>
